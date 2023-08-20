@@ -1,4 +1,4 @@
 import { Command } from "./Command";
-import { Hello } from "./Hello";
+import { UTSSubjectOutline } from "./commands/subjectOutline/UTSSubjectOutline";
 
-export const Commands: Command[] = [Hello];
+export const Commands: Command[] = [UTSSubjectOutline];
