@@ -18,9 +18,6 @@ const initMap = () => {
   for (const subject of subjectMapJSON.subjects) {
     subjectMap.set(subject.code, subject.name);
   }
-
-  console.log("Subject Map initialised");
-  console.table(subjectMap.get(17527));
 };
 
 initMap();
@@ -76,22 +73,14 @@ export const UTSSubjectOutline: Command = {
       .get("year", true)
       .value?.toString()!;
 
-    // If course code isnt an integer, return an error
-    if (isNaN(parseInt(year))) {
-      await interaction.followUp({
-        ephemeral: true,
-        content: "Year must be a number",
-      });
-      return;
-    }
-
     // Now just find the subject name as a string
     const courseName: string | undefined = subjectMap.get(parseInt(courseCode));
 
-    if (!courseCode) {
+    if (!courseName) {
       await interaction.followUp({
         ephemeral: true,
-        content: "Invalid subject code",
+        content:
+          "Invalid subject code, if you think this is an error, please raise an issue on the UTS FEIT Discord Server",
       });
       return;
     }
@@ -122,10 +111,6 @@ export const UTSSubjectOutline: Command = {
 
       return;
     }
-
-    // const outlineURL: string = getSubjectOutlineURL(courseCode, session, year);
-
-    // console.log(`Subject Outline URL: ${outlineURL}`);
   },
 };
 

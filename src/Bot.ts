@@ -5,8 +5,6 @@ import interactionCreate from "./interactionCreate";
 
 config();
 
-console.log("Bot is starting");
-
 const client = new Client({
   intents: [],
 });
