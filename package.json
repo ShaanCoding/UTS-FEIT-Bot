@@ -1,0 +1,31 @@
+{
+  "name": "uts-discord-bot",
+  "version": "1.0.0",
+  "description": "A discord bot for the UTS FEIT Discord Server",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/Bot.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ShaanCoding/UTS-FEIT-Bot.git"
+  },
+  "author": "github.com/ShaanCoding",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/ShaanCoding/UTS-FEIT-Bot/issues"
+  },
+  "homepage": "https://github.com/ShaanCoding/UTS-FEIT-Bot#readme",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/node": "^20.5.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}
